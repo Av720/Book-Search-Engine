@@ -2,13 +2,13 @@
 import decode from 'jwt-decode';
 
 // create a new class to instantiate for a user
-class AuthService {
+class AuthService{
   // get user data
   getProfile() {
     return decode(this.getToken());
   }
 
-  // check if user's logged in
+  // check if user is logged in
   loggedIn() {
     // Checks if there is a saved token and it's still valid
     const token = this.getToken();
@@ -46,4 +46,6 @@ class AuthService {
   }
 }
 
-export default new AuthService();
+const Auth = new AuthService();
+
+export default Auth;
