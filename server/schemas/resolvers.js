@@ -40,15 +40,17 @@ const resolvers = {
         },
 
         saveBook: async (_parent, { bookData }, context) => {
-            if (context.user) {
-                const updatedUser = await User.findByIdAndUpdate(
-                    { _id: context.user._id },
+            // if (context.user) {
+            const updatedUser = await User.findByIdAndUpdate(
+                { _id: "643cabe8fed56765f185f8ff "},
+                    // { _id: context.user._id }, 
+
                     { $push: { savedBooks: bookData } },
                     { new: true }
                 );
                 return updatedUser;
-            }
-            throw new AuthenticationError('You need to be logged in!');
+            // }
+            // throw new AuthenticationError('You need to be logged in!');
         },
         removeBook: async (_parent, { bookId }, context) => {
             if (context.user) {

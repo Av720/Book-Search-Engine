@@ -27,8 +27,8 @@ const SearchBooks = () => {
   // this state will hold saved bookId values
   const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
   // usemutation for savebook is save_book  
-  const [saveBook] = useMutation(SAVE_BOOK);
-
+  const [saveBook, {error}] = useMutation(SAVE_BOOK)
+ error && console.log(JSON.stringify(error));
 
   // useEffect will save the "savebookids" list tot he local storeage 
   useEffect(() => {
