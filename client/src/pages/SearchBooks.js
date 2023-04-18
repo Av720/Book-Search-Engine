@@ -21,20 +21,21 @@ import { SAVE_BOOK } from '../utils/mutations'
 const SearchBooks = () => {
   // create state for holding returned google api data
   const [searchedBooks, setSearchedBooks] = useState([]);
-  // create state for search field data
+  // create state for holding our search field data
   const [searchInput, setSearchInput] = useState('');
 
-  // this state will hold saved bookId values
+  // create state to hold saved bookId values
   const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
   // usemutation for savebook is save_book  
-  const [saveBook, {error}] = useMutation(SAVE_BOOK)
- error && console.log(JSON.stringify(error));
+  const [saveBook] = useMutation(SAVE_BOOK);
 
-  // useEffect will save the "savebookids" list tot he local storeage 
+  // set up useEffect hook to save `savedBookIds` list to localStorage on component unmount
+  // learn more here: https://reactjs.org/docs/hooks-effect.html#effects-with-cleanup
   useEffect(() => {
     return () => saveBookIds(savedBookIds);
   });
 
+  // create method to search for books and set state on form submit
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
@@ -66,10 +67,9 @@ const SearchBooks = () => {
     }
   };
 
-  // this function will handle the save of a book to the database 
+  // create function to handle saving a book to our database
   const handleSaveBook = async (bookId) => {
-  
-    // bookToSave will find the book by matching id
+    // find the book in `searchedBooks` state by the matching id
     const bookToSave = searchedBooks.find((book) => book.bookId === bookId);
 
     // get token
