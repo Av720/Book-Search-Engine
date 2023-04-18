@@ -12,17 +12,17 @@ import { setContext } from '@apollo/client/link/context';
 // user react elements for client router
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// component and pages to display
+// import all the components and pages to display
 import SearchBooks from './pages/SearchBooks';
 import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
 
-// Construct our main GraphQL API endpoint
+// this will construct GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
 
-// Construct request middleware that will attach the JWT token to every request as an `authorization` header
+// the middleware will attach the jwt token to every request as an `authorization` header
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
   const token = localStorage.getItem('id_token');
@@ -36,7 +36,7 @@ const authLink = setContext((_, { headers }) => {
 });
 
 const client = new ApolloClient({
-  // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL API
+
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 })
@@ -51,7 +51,7 @@ function App() {
           <Routes>
             <Route path='/' element={<SearchBooks />} />
             <Route path='/saved' element={<SavedBooks />} />
-            {/*had to run as render to get display to app running even though this path isn't being called*/}
+      
             <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
           </Routes>
         </>

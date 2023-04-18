@@ -6,6 +6,7 @@ export const getSavedBookIds = () => {
   return savedBookIds;
 };
 
+// this function will save the bookids to local storage
 export const saveBookIds = (bookIdArr) => {
   if (bookIdArr.length) {
     localStorage.setItem('saved_books', JSON.stringify(bookIdArr));
@@ -14,6 +15,7 @@ export const saveBookIds = (bookIdArr) => {
   }
 };
 
+// this function will remove the bookid when removed from database 
 export const removeBookId = (bookId) => {
   const savedBookIds = localStorage.getItem('saved_books')
     ? JSON.parse(localStorage.getItem('saved_books'))

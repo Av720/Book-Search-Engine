@@ -16,7 +16,7 @@ const LoginForm = () => {
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
 
-  // mutation for login of user -  dropped { error } claimed but never read !!
+  // mutation for login of user 
   const [loginUser] = useMutation(LOGIN_USER);
 
   const handleInputChange = (event) => {
@@ -50,7 +50,7 @@ const LoginForm = () => {
     });
   };
 
-  // if signup has a username field then why are we logging the user in with email.  what's the point of username??  there is none at that point.  if it is to just display their name to the user themself, pointless.  help them feel included with personal username login.
+
   return (
     <>
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
