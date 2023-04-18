@@ -2,6 +2,7 @@ const express = require('express');
 // import apollo which includes our graphql visual interface
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
+require('dotenv').config();
 
 // we require an auth function to pass below as context
 const { authMiddleware } = require('./utils/auth');
