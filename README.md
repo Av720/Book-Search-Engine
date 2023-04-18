@@ -14,7 +14,7 @@ This application is a Google Books API search engine built with GrapghQL, Apollo
 - [Usage](#usage)
 - [License](#license)
 - [Testing](#testing)
-- [Preview](#Preview)
+- [Preview](#preview)
 - [Questions](#questions)
 - [Contribution](#contribution)
 - [Technologies Used](#technologies-used)
