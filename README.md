@@ -56,7 +56,7 @@ n/a
 
 * Here is a short video on how to use the app: 
 
-https://user-images.githubusercontent.com/120581801/232946543-24dff6cd-c567-40ce-9b28-a2c296b6c5b0.mp4
+https://user-images.githubusercontent.com/120581801/232947227-df953bd6-b8e1-48eb-b006-5d9f64347bc1.mp4
 
 ## Contribution 
 
