@@ -46,12 +46,21 @@ n/a
 
 ## Preview
 
-Here is a preview on how to use the application: 
+* Here is a preview screnshot of the application: 
 
+| Page | Preview |
+| :---: | :---: |
+| Main Page |  ![Screenshot 2023-04-18 194844](https://user-images.githubusercontent.com/120581801/232945896-56b025d3-3e7a-47e5-aba0-9fb005c14cea.png)|
+| Book Search | ![Screenshot 2023-04-18 195004](https://user-images.githubusercontent.com/120581801/232945919-9359121d-0b7f-4842-8d0a-d28e4076daef.png)|
+| Book Save | ![Screenshot 2023-04-18 195026](https://user-images.githubusercontent.com/120581801/232945932-58046117-1927-4801-ab03-2781e88c92b7.png)| 
 
+* Here is a short video on how to use the app: 
+
+https://user-images.githubusercontent.com/120581801/232946543-24dff6cd-c567-40ce-9b28-a2c296b6c5b0.mp4
 
 ## Contribution 
-no contributions 
+
+No contributions fo this project
 
 ## Questions 
 If you have any questions please contact me at the following email address: valenciaaldo0303@gmail.com
